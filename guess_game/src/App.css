@@ -1,0 +1,32 @@
+/* App container fills the screen */
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0220; /* Light background */
+}
+
+/* Form box styling */
+.form_box {
+  border: 5px solid black;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgb(33, 77, 164);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+input{
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #111010;
+  border-radius: 20px;
+}
+input:hover{
+  background-color:#6d63e1;
+}
+input:focus{
+  background-color: rgb(245, 245, 163);
+}
