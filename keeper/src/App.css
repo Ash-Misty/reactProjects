@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(247, 244, 191);
+  font-family: 'Staatliches', sans-serif;
+  min-height: 100vh;
+}
+
+/* ✅ Fixed Navbar Full Width */
+.Navbar {
+  background-color: rgb(248, 248, 77);
+  width: 100vw;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ✅ Centered Notes + Responsive Columns */
+.Notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Notes-div {
+  background-color: whitesmoke;
+  height: fit-content;
+  padding: 1.2rem;
+  border-radius: 15px;
+  border-left: 5px solid gold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.Notes-div:hover {
+  transform: translateY(-5px);
+}
+
+.notes-title {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+/* 📱 Mobile-first Styling */
+@media (max-width: 768px) {
+  .notes-title {
+    font-size: 1.3rem;
+  }
+
+  .Notes-div {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notes-title {
+    font-size: 1.1rem;
+  }
+
+  .Notes-div {
+    padding: 0.8rem;
+  }
+}
+
+/* 🧾 Form Styling */
+.form {
+  background-color: #ffffff;
+  max-width: fit-content;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ✏️ Input Styling */
+.custom-input input {
+  border-radius: 25px;
+  border: 2px solid #f7e10a;
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+.custom-input input:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 6px rgba(255, 193, 7, 0.5);
+}
+
+/* 🔘 Button Styling */
+.yellow-btn {
+  background-color: #f7e10a !important;
+  color: #111;
+  border: none;
+  margin-top: 5px;
+  border-radius: 50px;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.yellow-btn:hover {
+  background-color: #e6ce00 !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trash-btn:hover {
+  background-color: #f74b48 !important;
+  border-color: none;
+}
+
+.del-div {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
